@@ -40,6 +40,7 @@ export default {
   },
   async created() {
     this.coins = await this.fetchCoins();
+    console.log(this.coins);
   },
 };
 </script>

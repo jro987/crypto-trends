@@ -21,10 +21,7 @@ export default {
 <style scoped>
 div {
   width: 100%;
-  background-color: #dad7cd;
-}
-h1 {
-  margin-top: 0;
-  padding-top: 30px;
+  background-color: #fff;
+  padding: 20px 0;
 }
 </style>
