@@ -1,0 +1,1 @@
+Crypto Currency trends tracker using CoinMarketCap's API.
