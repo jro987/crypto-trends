@@ -1,6 +1,6 @@
 <template>
-  <div :key="coin.id" v-for="coin in coins.data">
-    <Coin :coin="coin" />
+  <div :key="coin.id" v-for="coin in coins">
+    <Coin :coin="coin" @add-coin="$emit('add-coin', coin.id)" />
   </div>
 </template>
 

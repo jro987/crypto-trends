@@ -1,7 +1,5 @@
 <template>
-  <router-link to="{{ to }}">
-    <div>{{ text }}</div>
-  </router-link>
+  <button :id="id" :class="classes">{{ text }}</button>
 </template>
 
 <script>
@@ -9,12 +7,14 @@ export default {
   name: "NavButton",
   props: {
     text: String,
+    classes: String,
   },
 };
 </script>
 
 <style scoped>
-div {
+button {
+  cursor: pointer;
   display: inline-block;
   margin: 0 25px;
   padding: 10px 20px;
@@ -23,8 +23,13 @@ div {
   color: #333;
   font-size: 16px;
   font-weight: 600;
+  border-width: 0;
 }
-div:hover {
+button.active-button {
+  background-color: #333;
+  color: #ddd;
+}
+button:hover {
   background-color: #588157;
 }
 </style>

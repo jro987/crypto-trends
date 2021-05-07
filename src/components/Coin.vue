@@ -5,6 +5,7 @@
         formatCurrency(coin.quote.USD.price)
       }}
     </h3>
+    <span @click="$emit('add-coin', coin.id)" class="add-coin">+</span>
     <p>
       24H:
       <span :class="percentClass(coin.quote.USD.percent_change_24h)">{{
@@ -58,6 +59,7 @@ div {
   margin: 10px auto;
   padding: 5px;
   background-color: #dad7cd;
+  position: relative;
 }
 h3 {
   margin: 15px;
@@ -70,5 +72,17 @@ p {
 }
 .red {
   color: red;
+}
+.add-coin {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 22px;
+  font-weight: 600;
+  color: green;
+}
+.add-coin:hover {
+  color: #333;
+  cursor: pointer;
 }
 </style>
