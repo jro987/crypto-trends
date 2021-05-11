@@ -45,7 +45,7 @@ export default {
             convert: "USD",
           },
           headers: {
-            "X-CMC_PRO_API_KEY": "bc917b54-88b5-4889-9e7b-cc6804d00767",
+            "X-CMC_PRO_API_KEY": process.env.VUE_APP_API_KEY,
           },
         }
       );
