@@ -59,6 +59,7 @@ export default {
     },
     addCoin(id) {
       this.coinsFollowed.push(this.coins.find((x) => x.id === id));
+      this.coins = this.coins.filter(this.coins.find((x) => x.id === id));
     },
     sortByPrice() {
       this.coins
